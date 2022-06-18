@@ -1,0 +1,4318 @@
+/*
+=========================
+ Main/Default style
+=========================
+*/
+*{
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+}
+
+*:focus {
+    outline: none;
+}
+
+.preload * {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -ms-transition: none !important;
+  -o-transition: none !important;
+}
+
+html,body { height:100%; }
+
+body{
+    background: #ECECEC;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+br.break{
+    clear: both;
+}
+
+.shortLine{
+    width: 480px;
+    margin: 1px auto auto auto;
+    border-bottom: 1px solid #5D5D5D;
+    z-index: 999;
+    height: 1px;
+}
+
+.noscroll { 
+    position: fixed; 
+    overflow: hidden;
+    width: 100%;
+}
+
+#ageVari{
+    background: #57637E;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 99999999;
+    display: block;
+    text-align: center;
+}
+
+#ageVari img {
+    position: relative;
+    margin-top: -5%;
+    z-index: 0;
+}
+
+#ageVari p{
+    position: relative;
+    width: 40%;
+    margin: -200px auto auto auto;
+    z-index: 10;
+    font-weight: normal;
+    color: #ACBCD6;
+    font-size: 1.25vw;
+    font-family: 'Anton';
+}
+
+#ageVari .inputTriSplit{
+    position: relative;
+    display: block;
+    z-index: 10;
+    margin: -15px auto auto auto;
+    width: 60%;
+}
+
+#ageVari .inputTriSplit select{
+    background: #323846;
+    font-weight: normal;
+    color: #ACBCD6;
+    height: 128px;
+    width: calc(35% / 3);
+    padding-left: 1%;
+    font-size: 1.5vw;
+    display: inline-block;
+    font-family: 'Anton';
+    text-align: center;
+    text-transform: uppercase;
+    transition: ease all 0.2s;
+}
+
+#ageVari .inputTriSplit select:hover{
+    background: #ACBCD6;
+    color: #323846;
+    cursor: pointer;
+}
+
+#ageVari input[type=submit]{
+    background: #323846;
+    width: 21.4%;
+    height: 128px;
+    font-size: 2vw;
+    display: block;
+    font-family: 'Anton';
+    text-align: center;
+    margin: 10px auto auto auto;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: #ACBCD6;
+    transition: ease all 0.3s;
+}
+
+#ageVari button[type=submit]:hover{
+    background: #ACBCD6;
+    color: #323846;
+}
+
+#ageVari .inputTriSplit select option{
+    font-size: 1vw;
+    font-family: 'Open Sans';
+    text-transform: uppercase;
+    background: #323846;
+    color: #ACBCD6;
+}
+
+#ageVari .inputTriSplit select:hover option{
+    background: #323846;
+    color: #ACBCD6;
+}
+
+#accountOverlay{
+    position: fixed;
+    z-index: 10000;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+     background: linear-gradient(45deg, rgba(0,0,0, 0.75), #001F3F);
+    line-height: 100%;
+    visibility: hidden;
+    transition: all ease 0.3s;
+}
+
+#accountOverlay .loadingBox{
+    background: linear-gradient(0deg, rgba(123,99,221, 1), #39CCCC);
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    left: calc(50% - (160px / 2));
+    top: 0%;
+    visibility: hidden;
+    box-shadow: 0px 15px 60px rgba(0, 0, 0, 0.45);
+    overflow: hidden;
+    border-radius: 5px;
+    transition: all ease 0.5s;
+    padding: 5px;
+    color: rgba(255, 255, 255, 1);
+    z-index: 500;
+}
+
+#accountOverlay .loadingBox .loadingContent{
+    position: relative;
+    background: linear-gradient(0deg, #33495F,#2B3E51);
+    height: calc(100% - 20px);
+    width: calc(100% - 20px);
+    border-radius: 5px;
+    padding: 10px;
+    font-family: "Open Sans Condensed";
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.65);
+}
+
+#accountOverlay .loadingBox .loadingContent h2{
+    margin-top: 20px;
+    position: absolute;
+    display: block;
+    width: 94%;
+    text-align: center;
+    color: #fff;
+}
+
+#accountOverlay .loadingBox .loadingContent img{
+    position: absolute;
+    left: -16px;
+    top: 3px;
+}
+
+#accountOverlay .loginBox{
+    background: linear-gradient(0deg, rgba(123,99,221, 1), #39CCCC);
+    position: absolute;
+    width: 320px;
+    height: 320px;
+    left: calc(50% - (320px / 2));
+    top: 0%;
+    visibility: hidden;
+    box-shadow: 0px 15px 60px rgba(0, 0, 0, 0.45);
+    overflow: hidden;
+    border-radius: 5px;
+    transition: all ease 0.5s;
+    padding: 5px;
+    color: rgba(255, 255, 255, 1);
+}
+
+#accountOverlay .loginBox .loginContent{
+    position: relative;
+    background: linear-gradient(0deg, #33495F,#2B3E51);
+    height: calc(100% - 20px);
+    width: calc(100% - 20px);
+    border-radius: 5px;
+    padding: 10px;
+    font-family: "Open Sans Condensed";
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.65);
+}
+
+#accountOverlay .loginBox .loginContent a{
+    color: #5E91D6;
+    font-weight: bold;
+    transition: all ease 0.3s;
+}
+
+#accountOverlay .loginBox .loginContent a:hover{
+    color: #39CBCC;
+    text-decoration: underline;
+}
+
+#accountOverlay .loginBox button{
+position: absolute;
+    right: 5px;
+    top: 5px;
+    height: 24px;
+    line-height: 24px;
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 24px;
+    overflow: hidden;
+    word-break: break-all;
+    word-wrap: break-word;
+    border-radius: 100%;
+    background: rgba(255, 255, 255, 0.85);
+    font-family: "Roboto";
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: all ease 0.2s;
+}
+
+#accountOverlay .loginBox button:hover{
+    background: #39CBCC;
+    border-radius: 13px;
+    color: #fff;
+    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.55);
+    cursor: pointer;
+    letter-spacing: 1px;
+}
+
+#accountOverlay .loginBox .loginContent h5{
+    font-family: "Open Sans Condensed";
+    padding-bottom: 6px;
+    text-transform: uppercase;
+    width: 80px;
+    font-size: 28px;
+    font-weight: normal;
+    border-bottom: 1px solid #39CCCC;
+    text-align: left;
+    letter-spacing: 1px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+#accountOverlay .loginBox .loginContent label{
+    clear: both;
+    font-family: "Open Sans Condensed";
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 18px;
+    margin-top: 20px;
+    margin-bottom: 2px;
+    display: block;
+    color: #fff;
+}
+
+#accountOverlay .loginBox .loginContent input[type=text], #accountOverlay .loginBox .loginContent input[type=password]{
+border: 0px;
+background: rgba(0, 0, 0, 0);
+color: rgba(255, 255, 255, 0.35);
+    font-family: "Open Sans Condensed";
+    font-weight: normal;
+    font-size: 18px;
+    height: 32px;
+    line-height: 32px;
+    padding-bottom: 0px;
+    width: 95%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    display: block;
+    clear: both;
+    margin-bottom: 0px;
+}
+
+#accountOverlay .loginBox .loginContent input[type=submit]{
+    border: 0px;
+    width: 98%;
+    position: relative;
+    display: block;
+    font-family: "Open Sans Condensed";
+    text-transform: uppercase;
+    font-weight: normal;
+    height: 64px;
+    font-size: 32px;
+    letter-spacing: 1px;
+    background: #39CCCC;
+    color: rgba(255, 255, 255, 0.95);
+    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0);
+    transition: all ease 0.2s;
+}
+
+#accountOverlay .loginBox .loginContent input[type=submit]:hover{
+    height: 64px;
+    font-weight: bold;
+    font-size: 36px;
+    letter-spacing: 6px;
+    background: #39CCCC;
+    color: rgba(255, 255, 255, 1);
+    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.65);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.65);
+    cursor: pointer;
+}
+
+#accountOverlay .registerBox{
+    visibility: hidden;
+    position: absolute;
+    width: 960px;
+    left: calc(50% - (960px / 2));
+    top: 0%;
+    height: 480px;
+    display: grid;
+    grid-gap: 0px;
+    grid-template-columns: 320px calc(100% - (320px));
+    box-shadow: 0px 15px 60px rgba(0, 0, 0, 0.45);
+/*    overflow: hidden;*/
+    border-radius: 5px;
+    color: #ECF0F1;
+    transition: all ease 0.5s;
+}
+
+#accountOverlay .registerBox_Left{
+    grid-column: 1;
+    grid-row: 1; 
+    background: linear-gradient(0deg, rgba(123,99,221, 1), #39CCCC);
+    text-align: center;
+}
+
+#accountOverlay .registerBox_Left img{
+    width: 180px;
+    height: 180px;
+    margin-top: 10%;
+    position: relative;
+    opacity:1;
+    padding-bottom: 5px;
+}
+
+#accountOverlay .registerBox_Left p{
+    margin: 10px;
+    margin-top: 20px;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.85);
+    text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.05);
+    font-family: "Roboto";
+    text-transform: uppercase;
+    line-height: 22px;   
+}
+
+#accountOverlay .registerBox_Left p b{
+    font-size: 16px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+#accountOverlay .registerBox_Left p i{
+    font-style: normal;
+    font-weight: bolder;
+    font-size: 14px;
+}
+
+#accountOverlay .registerBox_Right{
+    grid-column: 2;
+    grid-row: 1;     
+    background: linear-gradient(0deg, #33495F,#2B3E51);
+    padding: 5px;
+    padding-left: 30px;
+}
+
+#accountOverlay .registerBox_Right h5{
+    font-family: "Open Sans Condensed";
+    padding-bottom: 6px;
+    text-transform: uppercase;
+    width: 84px;
+    font-size: 24px;
+    font-weight: normal;
+    border-bottom: 1px solid #39CCCC;
+    text-align: left;
+    letter-spacing: 1px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+#accountOverlay .registerBox_Right button{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    height: 24px;
+    line-height: 24px;
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 24px;
+    overflow: hidden;
+    word-break: break-all;
+    word-wrap: break-word;
+    border-radius: 100%;
+    background: rgba(255, 255, 255, 0.85);
+    font-family: "Roboto";
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: all ease 0.2s;
+}
+
+#accountOverlay .registerBox_Right button:hover{
+    background: #39CBCC;
+    border-radius: 13px;
+    color: #fff;
+    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.55);
+    cursor: pointer;
+    letter-spacing: 1px;
+}
+
+#accountOverlay .registerBox_Right .registerForm{
+    height: 85%;
+    width: calc(100% - (20px));
+    position: relative;
+    margin-top: 0px;
+    display: grid;
+    grid-gap: 0px;
+    grid-template-columns: 52% 50%;
+    font-family: "Open Sans Condensed";
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.65);
+}
+
+#accountOverlay .registerBox_Right .registerForm a{
+    color: #5E91D6;
+    font-weight: bold;
+    transition: all ease 0.3s;
+}
+
+#accountOverlay .registerBox_Right .registerForm a:hover{
+    color: #39CBCC;
+    text-decoration: underline;
+}
+
+#accountOverlay .registerBox_Right .registerForm .inputSplit{
+    position: relative;
+    display: grid;
+    grid-gap: 0px;
+    grid-template-columns: 48% 50%;
+    margin-bottom: -3px;
+}
+
+#accountOverlay .registerBox_Right .registerForm .inputTriSplit{
+    position: relative;
+    display: grid;
+    grid-gap: 0px;
+    grid-template-columns: calc(100% / 3) calc(100% / 3) calc(100% / 3);
+}
+
+#accountOverlay .registerBox_Right .registerForm .inputSplit .splitLeft{
+    grid-column: 1;
+    grid-row: 1;  
+}
+
+#accountOverlay .registerBox_Right .registerForm .inputSplit .splitRight{
+    grid-column: 2;
+    grid-row: 1;  
+}
+
+#accountOverlay .registerBox_Right .registerForm .regFormleft{
+    grid-column: 1;
+    grid-row: 1;  
+}
+
+#accountOverlay .registerBox_Right .registerForm .regFormright{
+    grid-column: 2;
+    grid-row: 1;  
+}
+
+#accountOverlay .registerBox_Right .registerForm label{
+    clear: both;
+    font-family: "Open Sans Condensed";
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 16px;
+    margin-top: 10px;
+    margin-bottom: 7px;
+    display: block;
+    color: #fff;
+}
+
+.defTxt{
+    background: #fff;
+    padding: 5px;
+    height: 32px;
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    margin-top: 2px;
+    margin-bottom: 3px;
+    width: 40%;
+    font-family: 'Open Sans';
+    font-weight: bold;
+    font-size: 1.75vh;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.defTxt:focus{
+    color: rgba(0, 0, 0, 0.85);
+}
+
+.defBtn {
+    background: #3498db;
+    padding: 5px;
+    height: 48px;
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid #2980b9;
+    margin-top: 2px;
+    margin-bottom: 3px;
+    width: 40%;
+    font-family: 'Open Sans';
+    font-weight: bold;
+    font-size: 1.75vh;
+    color: rgba(0, 0, 0, 0.65);
+    line-height: 16px;
+    text-transform: uppercase;
+    transition: all ease 0.3s;
+}
+
+.defBtn:disabled{
+    opacity: 0.5;
+}
+
+.defBtn:hover{
+    color: #fff;
+    cursor: pointer;
+    background: #2EA5F9;
+    border: 1px solid #3498db;
+    letter-spacing: 1px;
+}
+
+.defBtn:disabled:hover{
+    background: #3498db;
+    padding: 5px;
+    height: 48px;
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid #2980b9;
+    margin-top: 2px;
+    margin-bottom: 3px;
+    width: 40%;
+    font-family: 'Open Sans';
+    font-weight: bold;
+    font-size: 1.75vh;
+    color: rgba(0, 0, 0, 0.65);
+    line-height: 16px;
+    text-transform: uppercase;
+    transition: all ease 0.3s;
+    letter-spacing: 0px;
+    cursor: default;
+}
+
+
+#accountOverlay .registerBox_Right .registerForm input[type=text]{
+border: 0px;
+background: rgba(0, 0, 0, 0);
+color: rgba(255, 255, 255, 0.35);
+    font-family: "Open Sans Condensed";
+    font-weight: normal;
+    font-size: 16px;
+    height: 26px;
+    padding-bottom: 5px;
+    width: 95%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    display: block;
+    clear: both;
+    margin-bottom: 5px;
+}
+
+#accountOverlay .registerBox_Right .registerForm input[type=password]{
+border: 0px;
+background: rgba(0, 0, 0, 0);
+color: rgba(255, 255, 255, 0.35);
+    font-family: "Open Sans Condensed";
+    font-weight: normal;
+    font-size: 16px;
+    height: 26px;
+    padding-bottom: 5px;
+    width: 95%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    display: block;
+    clear: both;
+    margin-bottom: 5px;
+}
+
+#accountOverlay .registerBox_Right .registerForm input[type=submit]{
+    border: 0px;
+    width: 98%;
+    position: relative;
+    display: block;
+    font-family: "Open Sans Condensed";
+    text-transform: uppercase;
+    font-weight: normal;
+    height: 56px;
+    font-size: 32px;
+    letter-spacing: 1px;
+    background: #39CCCC;
+    color: rgba(255, 255, 255, 0.95);
+    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0);
+    transition: all ease 0.2s;
+}
+
+#accountOverlay .registerBox_Right .registerForm input[type=submit]:disabled{
+    border: 0px;
+    width: 98%;
+    position: relative;
+    display: block;
+    font-family: "Open Sans Condensed";
+    text-transform: uppercase;
+    font-weight: normal;
+    height: 56px;
+    font-size: 32px;
+    letter-spacing: 1px;
+    background: #39CCCC;
+    color: rgba(255, 255, 255, 0.95);
+    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0);
+    transition: all ease 0.2s;
+    opacity: 0.5;
+}
+
+#accountOverlay .registerBox_Right .registerForm input[type=submit]:disabled:hover{
+    border: 0px;
+    width: 98%;
+    position: relative;
+    display: block;
+    font-family: "Open Sans Condensed";
+    text-transform: uppercase;
+    font-weight: normal;
+    height: 56px;
+    font-size: 32px;
+    letter-spacing: 1px;
+    background: #39CCCC;
+    color: rgba(255, 255, 255, 0.95);
+    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0);
+    transition: all ease 0.2s;
+}
+
+#accountOverlay .registerBox_Right .registerForm input[type=submit]:hover{
+    height: 56px;
+    font-weight: bold;
+    font-size: 36px;
+    letter-spacing: 6px;
+    background: #39CCCC;
+    color: rgba(255, 255, 255, 1);
+    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.65);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.65);
+    cursor: pointer;
+}
+
+#accountOverlay .registerBox_Right .registerForm input[type=number]{
+border: 0px;
+background: rgba(0, 0, 0, 0);
+color: rgba(255, 255, 255, 0.35);
+    font-family: "Open Sans Condensed";
+    font-weight: normal;
+    font-size: 16px;
+    height: 26px;
+    padding-bottom: 5px;
+    width: 95%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    display: block;
+    clear: both;
+    margin-bottom: 5px;
+}
+
+#accountOverlay .registerBox_Right .registerForm select{
+border: 0px;
+background: rgba(0, 0, 0, 0);
+color: rgba(255, 255, 255, 0.35);
+    font-family: "Open Sans Condensed";
+    font-weight: normal;
+    font-size: 16px;
+    height: 26px;
+    padding-bottom: 5px;
+    width: 95%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    display: block;
+    clear: both;
+    margin-bottom: 5px;
+}
+
+#accountOverlay .registerBox_Right .registerForm select option{
+    background-color: #2B3E51;
+    color: #fff;
+}
+
+#content{
+    position: relative;
+    width: 100%;
+    color: #5F5E5E;
+}
+
+#content .imageBanner{
+    width: 48%;
+    margin: 4px auto auto auto;
+    border: 3px solid #fff;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+}
+
+
+.admCP{
+    background: url(../images/Banner_BG_001.png) repeat !important;
+    background-size: 100%; 
+}
+
+#cpContent{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    display: grid;
+    grid-template-areas: "head fBar"
+"aside main"
+"footer footer";
+    grid-template-columns: 20% 80%;
+    grid-template-rows: 8% calc(100% - 13%) 5%;
+    overflow: hidden;
+}
+
+.cpTopFuncBar{
+    position: relative;
+    grid-area: fBar;
+/*    overflow: hidden;*/
+    background: #FFFFFF;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
+    z-index: 2;
+    height: 100%;
+}
+
+.cpTopFuncBar button{
+    width: 5%;
+    height: 100%;
+    float: right;
+    overflow: hidden;
+    text-align: center;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0);
+    transition: all ease 0.2s;
+}
+
+.cpTopFuncBar button:hover{
+    padding-right: 20px;
+}
+
+.cpTopFuncBar button img{
+    opacity: 0.35;
+    transition: all ease 0.2s;
+}
+
+.cpTopFuncBar button:hover img{
+    opacity: 0.65;
+    cursor: pointer;
+}
+
+.cpTopBar {
+    position: relative;
+    grid-area: head;
+    background: #00BFE9;
+    box-shadow: 2px 0px 2px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    text-align: left;
+}
+
+.adm_infoWindow{
+    display: grid;
+    width: 100%;
+    grid-template-areas: "dtl dml dml dbm"
+"dlm dml dml box"
+"dlm dml dml box";
+    grid-template-columns: calc(100% / 4) calc(100% / 4) calc(100% / 4) calc(100% / 4);
+    grid-template-rows: calc(99%/3) calc(99%/3) calc(99%/3);
+    grid-row-gap: 10px;
+    height: calc(98% - 300px);
+}
+
+.admDTL{
+    grid-area: dtl !important;
+}
+
+.admDBL{
+    grid-area: dbl !important;
+}
+.admDTM{
+    grid-area: dml !important;
+}
+.admDBM{
+    grid-area: dbm !important;
+}
+
+.admDBM h4{
+    width: 100%;
+    text-align: center;
+    font-family: 'Roboto';
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.55);
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+.admDBM h1{
+    display: block;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    font-weight: normal;
+    font-family: 'Anton';
+    font-size: 48px;
+}
+
+.admDBM h1 img{
+    display: block;
+    position: relative;
+    width: 64px;
+    margin: 0px auto auto auto;
+}
+
+.salesUp {
+    color: #91DC5A;
+}
+
+.salesDown {
+    color: #FF4D00;
+}
+
+.admDLM{
+    grid-area: dlm !important;
+}
+
+.adm_infWinFill_base{
+    grid-area: box;
+    position: relative;
+    display: grid;
+    grid-template-columns: 100%;
+    margin: 5px;
+    height: 100%;
+    color: #2F3A4C;
+    overflow: hidden;
+    border-radius: 1px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.15);
+    font-family: 'Open Sans Condensed';
+    background: #fff;
+}
+
+.cpTopBar img{
+    position: absolute;
+    opacity: 0.4;
+    
+    padding: 5px;
+    height: 90%;
+}
+
+.dashStats{
+    display: grid;
+    grid-template-columns: calc(100% / 4) calc(100% / 4) calc(100% / 4) calc(100% / 4);
+    width: 100%;   
+}
+
+.dashStatBox{
+    position: relative;
+    display: grid;
+    grid-template-columns: 25% 75%;
+    text-align: center;
+    margin: 5px;
+     line-height: 200px;
+    height: 156px;
+    color: #2F3A4C;
+    overflow: hidden;
+    font-size: 2.5vw;
+    border-radius: 1px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.15);
+    font-family: 'Open Sans Condensed';
+    word-wrap: break-word;
+    background: #fff;
+}
+
+.dashStatBox img{
+    position: relative;
+    margin-top: 0px;
+    opacity: 1;
+    z-index: 0;
+    grid-column: 1;
+    width: calc(100% - 10px);
+    padding: 5px;
+    height: 156px;
+}
+
+.dashStatBox h4{
+    grid-column: 2;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: -64px;
+    font-size: 1.5vw;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.admBackDropIMG{
+    width: 125%;
+    opacity: 0.1;
+    position: absolute;
+    top: -10%;
+    left: -25%;
+    -ms-transform: rotate(45deg); /* IE 9 */
+    -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
+    transform: rotate(45deg);
+    z-index: 0;
+}
+
+.dashStatBox b{
+    grid-column: 2;
+    z-index: 2;
+    position: relative;
+}
+
+.sbGreen{
+    background: #4BC0C0;
+}
+
+.sbBlue{
+    background: #36A2EB;
+}
+
+.sbRed{
+    background: #FF6384;
+}
+
+.sbPur{
+    background: #FFCE56;
+}
+
+.tbGreen{
+    color: #4BC0C0;
+}
+
+.tbBlue{
+    color: #36A2EB;
+}
+
+.tbRed{
+    color: #FF6384;
+}
+
+.tbPur{
+    color: #FFCE56;
+}
+
+.cpRight {
+    grid-area: main;
+    background: #EDEEF3;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    position: relative;
+}
+
+.cpRight .CPPAN{
+    position: relative;
+    display: grid;
+    width: 98%;
+    grid-template-areas: "cprtpl cprtpr" 
+        "cprlp cprrp";
+    grid-template-columns: calc(100% / 2) calc(100% / 2);
+    grid-template-rows: 64px calc(100% - 64px);
+    grid-gap: 10px;
+    height: calc(98% - 138px);
+    margin: 10px auto auto auto;
+}
+
+.cpRight .CPUPAN{
+    grid-template-areas: "cprtpl cprrp" 
+        "cprlp cprrp" !important;
+
+    height: calc(98% - 138px);
+}
+
+.cpRight .cpRRPE img.cpRRP_BCKDROP{
+    position: absolute;
+    width: 100%;
+    left: -25%;
+    top: -25%;
+    transform: rotate(25deg);
+    opacity: 0.05;
+}
+
+
+.cpRight .admBxOvrLay{
+    position: absolute;
+    z-index: 999;
+    background: rgba(0, 0, 0, 0.75);
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    overflow: hidden;
+}
+
+.admBxOvrLay .admOvrlayBx .titleBar{
+    height: 48px;
+    width: calc(100% + 1px);
+    background: #425068;
+    color: #fff;
+    position: relative;
+    transition: all ease 0.3s;
+    display: block;
+}
+
+.admBxOvrLay .admOvrlayBx .titleBar button{
+    height: 48px;
+    width: 48px;
+    float: right;
+    position: relative;
+    background: #00BFE9;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.25vh;
+    font-family: 'Open Sans';
+    text-transform: uppercase;
+    transition: all ease 0.2s;
+}
+
+.admBxOvrLay .admOvrlayBx .titleBar b{
+    float: left;
+    height: 48px;
+    line-height: 48px;
+    text-indent: 10px;
+    font-family: 'Open Sans';
+    text-transform: uppercase;
+}
+
+.admBxOvrLay .admOvrlayBx .titleBar button img{
+    height: 50%;
+    width: 50%;
+    position: absolute;
+    top: calc(50% - (50% / 2));
+    left: calc(50% - (50% / 2));
+    transform: rotate3d(0, 1, 0, 90deg);
+    opacity: 0;
+    transition: all ease 0.2s;
+}
+
+.admBxOvrLay .admOvrlayBx .titleBar button:hover{
+    color: rgba(255, 255, 255, 0);
+    cursor: pointer;
+}
+
+.admBxOvrLay .admOvrlayBx .titleBar button:hover img{
+    opacity: 1;
+    transform: rotate3d(0, 1, 0, 0deg);
+}
+
+.refresh{
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    overflow: hidden;
+    margin-top: 0px;
+    margin-left: 5px;
+    background: #00BFE9;
+    border-radius: 100%;
+}
+
+.refresh img{
+    width: 75%;
+    height: 75%;
+}
+
+.CRPSPIN{
+    transform: rotate3d(0, 1, 0, 90deg);
+    transition: all ease 0.15s;
+}
+
+.admBXCont .adm_userID{
+    width: 42px;
+    height: 42px;
+    border-radius: 100%;
+    color: #fff;
+    background: #3498db;
+    font-size: 12px;
+    text-align: center;
+    line-height: 42px;
+    overflow: hidden;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    font-weight: normal;
+}
+
+.admBXCont .adm_userAccountVerified_F, .admBXCont .adm_userAccountVerified_T{
+    width: 42px;
+    height: 42px;
+    border-radius: 100%;
+    color: #fff;
+    background-image: url(../images/verified_WHI.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 24px 24px;
+    font-size: 12px;
+    text-align: center;
+    line-height: 42px;
+    overflow: hidden;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-weight: normal;
+}
+
+.admBXCont .adm_userAccountVerified_F{
+    background-color: #e74c3c;
+}
+.admBXCont .adm_userAccountVerified_T{
+    background-color: #2ecc71;
+}
+
+.admBXCont .adm_userName{
+    position: absolute;
+    top: 5px;
+    left: 60px;
+    height: 32px;
+    line-height: 32px;
+    width: calc(78% - ((5px+42px) * 2));
+    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Open Sans';
+    font-size: 0.5vw;
+    overflow: hidden;
+    display: block;
+}
+
+.admBXCont .adm_userAccountCreatedDt{
+    position: absolute;
+    top: 42px;
+    left: 60px;
+    height: 12px;
+    line-height: 12px;
+    text-align: left;
+    font-weight: normal;
+    font-style: italic;
+    font-family: 'Open Sans';
+    font-size: 12px;
+}
+
+.admBXCont .adm_userAccountLastLog{
+    position: absolute;
+    top: 42px;
+    right: 68px;
+    height: 12px;
+    line-height: 12px;
+    text-align: right;
+    font-weight: normal;
+    font-style: italic;
+    font-family: 'Open Sans';
+    font-size: 12px;
+}
+
+.admBXCont .adm_userNameAddressInfo{
+    position: absolute;
+    top: 76px;
+    left: 25%;
+    width: 50%;
+    line-height: 20px;
+    text-align: center;
+    font-weight: bold;
+    font-style: normal;
+    font-family: 'Open Sans';
+    font-size: 18px;
+}
+
+.admBXCont .adm_userPhone{
+    position: absolute;
+    bottom: 32px;
+    left: 60px;
+    line-height: 32px;
+    text-align: left;
+    font-weight: bold;
+    font-style: normal;
+    font-family: 'Open Sans';
+    font-size: 14px;
+    display: block;
+    text-indent: 32px;
+}
+
+.admBXCont .adm_userAccountType_ADM::after{
+    font-weight: bold;
+    font-style: normal;
+    font-family: 'Open Sans';
+    font-size: 18px;
+    color: #e67e22;
+    content: 'Admin';
+    height: 32px;
+    line-height: 32px;
+    margin-top: 5px;
+    padding: 5px;
+    text-transform: uppercase;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+.admBXCont .adm_userAccountType_DEF::after{
+    font-weight: bold;
+    font-style: normal;
+    font-family: 'Open Sans';
+    font-size: 18px;
+    color: #34495e;
+    content: 'Default';
+     height: 32px;
+    line-height: 32px;
+    margin-top: 5px;
+    padding: 5px;
+    text-transform: uppercase;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+.admBXCont .adm_userAccountType_MOD::after{
+    font-weight: bold;
+    font-style: normal;
+    font-family: 'Open Sans';
+    font-size: 18px;
+    color: #9b59b6;
+    content: 'Moderator';
+     height: 32px;
+    line-height: 32px;
+    margin-top: 5px;
+    padding: 5px;
+    text-transform: uppercase;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.admBXCont .adm_userAccountType_BAN::after{
+    font-weight: bold;
+    font-style: normal;
+    font-family: 'Open Sans';
+    font-size: 18px;
+    color: #e74c3c;
+    content: 'Banned';
+     height: 32px;
+    line-height: 32px;
+    margin-top: 5px;
+    padding: 5px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    text-transform: uppercase;
+}
+
+.admBXCont .adm_userLoginAttempts{
+    
+    height: 12px;
+    line-height: 12px;
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 10px;
+    font-weight: normal;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Open Sans';
+    padding-top: 5px;
+    display: block;
+    
+}
+
+.admBXCont .adm_userPhone img{
+    width: 24px;
+    height: 24px;
+    opacity: 0.4;
+    position: absolute;
+     margin-left: -32px;
+    margin-top: 3px;
+}
+
+
+.admBXCont .adm_userFax{
+    position: absolute;
+    bottom: 32px;
+    right: 64px;
+    line-height: 32px;
+    height: 32px;
+    text-align: left;
+    font-weight: bold;
+    font-style: normal;
+    font-family: 'Open Sans';
+    font-size: 14px;
+    display: block;
+    text-indent: 32px;
+}
+
+.admBXCont .adm_userFax img{
+    width: 24px;
+    height: 24px;
+    opacity: 0.4;
+    position: absolute; 
+    margin-left: -32px;
+    margin-top: 3px;
+}
+
+
+.admBxOvrLay .admOvrlayBx .admBXCont{
+width: calc(100%-16px);
+height: calc(100% - 64px);
+background: #fff;
+    color: rgba(0, 0, 0, 0.75);
+    padding: 10px;
+    font-family: 'Open Sans';
+    font-weight: bold;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    position: relative;
+    color: #34495e;
+}
+
+ol.CUSTOMOUTPUT{
+    list-style-type: none;
+    display: block;
+    width: 50%;
+     min-height: 32px;
+    height: auto;
+    overflow: auto;
+    position: relative;
+    padding: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+   
+}
+
+ol.CUSTOMOUTPUT li{
+    display: inline-block;
+    width: auto;
+    height: 16px;
+    padding: 5px;
+     padding-right: 24px;
+    text-align: left;
+    background: #00BFE9;
+    color: #fff;
+    overflow: hidden;
+    margin: 3px;
+    font-size: 14px;
+    line-height: 16px;
+    position: relative;
+    border-radius: 25px;
+    padding-left: 6px;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+ol.CUSTOMOUTPUT li button{
+    width: 16px;
+    height: 16px;
+    border-radius: 100%;
+    background: #fff;
+    position: absolute;
+    right: 4px;
+    line-height: 16px;
+    overflow: hidden;
+    top: 5px;
+    transition: ease all 0.3s;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+ol.CUSTOMOUTPUT li button:hover{
+    font-weight: bold;
+    color: rgba(0, 0, 0, 1);
+    cursor: pointer;
+}
+
+
+.admBxOvrLay .admOvrlayBx .admBXCont textarea{
+    border: 1px solid rgba(0,0,0,0.25);
+    display: block;
+    min-height: 128px;
+    line-height: 16px;
+    font-weight: bold;
+    font-family: 'Open Sans';
+    color: rgba(0, 0, 0, 0.45);
+    padding: 5px;
+    padding-left: 0px;
+    width: 50%;
+    font-size: 1.5vh;
+}
+
+.admBxOvrLay .admOvrlayBx .admBXCont select{
+    border-bottom: 1px solid rgba(0,0,0,0.25);
+    display: block;
+    height: 32px;
+    line-height: 32px;
+    font-weight: bold;
+    font-family: 'Open Sans';
+    color: rgba(0, 0, 0, 0.45);
+    padding: 5px;
+    padding-left: 0px;
+    width: 50%;
+    font-size: 1.5vh;
+}
+
+.admBxOvrLay .admOvrlayBx .admBXCont select option{
+    color: #000;
+}
+
+.admBxOvrLay .admOvrlayBx .admBXCont input[type=number]{
+    border-bottom: 1px solid rgba(0,0,0,0.25);
+    display: block;
+    height: 32px;
+    line-height: 32px;
+    font-weight: bold;
+    font-family: 'Open Sans';
+    color: rgba(0, 0, 0, 0.45);
+    padding: 5px;
+    padding-left: 0px;
+    width: 50%;
+    font-size: 1.5vh;
+}
+
+
+.admBxOvrLay .admOvrlayBx .admBXCont .fpreviewWindow{
+    width: 333px;
+    height: 343px;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    text-align: center;
+    overflow: hidden;
+}
+.admBxOvrLay .admOvrlayBx .admBXCont .fpreviewWindow img{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    opacity: 0.15;
+}
+
+.prodprevImg{
+    width: 100px !important;
+    height: 150px !important;
+    position: relative !important;
+    margin-top: 5px;
+    display: block;
+    opacity: 0.15;
+}
+
+
+.admBxOvrLay .admOvrlayBx .admBXCont label{
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.admBxOvrLay .admOvrlayBx .admBXCont input{
+    margin-bottom: 10px;
+}
+
+.admBxOvrLay .admOvrlayBx .admBXCont input[type=submit]{
+    width: 50%;
+    height: 64px;
+    background: #00BFE9;
+    line-height: 64px;
+    text-align: center;
+    display: block;
+    position: relative;
+    margin-top: 10px;
+    color: #fff;
+    font-size: 2vh;
+    text-transform: uppercase;
+    font-family: 'Open Sans';
+    letter-spacing: 0px;
+    transition: all ease 0.2s;
+}
+
+.admBxOvrLay .admOvrlayBx .admBXCont input[type=submit]:hover{
+    letter-spacing: 2px;
+    font-weight: bold;
+    font-size: 2.25vh;
+    cursor: pointer;
+}
+
+.admBxOvrLay .admOvrlayBx .admBXCont input[type=text]{
+    border-bottom: 1px solid rgba(0,0,0,0.25);
+    display: block;
+    height: 32px;
+    line-height: 32px;
+    font-weight: bold;
+    font-family: 'Open Sans';
+    color: rgba(0, 0, 0, 0.45);
+    padding: 5px;
+    padding-left: 0px;
+    width: 50%;
+    font-size: 1.5vh;
+}
+
+.admBxOvrLay .admOvrlayBx{
+    position: absolute;
+    left: 25%;
+    top: 25%;
+    width: 50%;
+    height: 50%;
+    min-width: 50%;
+    min-height: 50%;
+    max-width: 50%;
+    max-height: 50%;
+    opacity: 1;
+    background: #000;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.50);
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+    transform: rotate3d(0, 1, 0, 90deg);
+    display: block;
+    transition: all ease 0.3s;
+    overflow: hidden;
+}
+
+.cpRight .cpRRPE .editorWindow{
+position: absolute;
+width: 100%;
+height: 100%;
+background: #fff;
+z-index: 200;
+}
+
+.cpRight .cpRRPE{
+    overflow: hidden !important;
+    overflow-y: auto !important;
+}
+
+.cpRight .cpRRPE ul{
+    overflow: hidden;
+    height: auto;
+}
+
+.cpRight .cpRRPE ul li textarea{
+    position: relative;
+    height: 200px;
+    width:36vw;
+    margin: 10px auto auto auto;
+    resize: none;
+    font-family: 'Open Sans';
+    font-weight: bold;
+    font-style: italic;
+}
+
+.cpRight .cpRRPE ul.productList{
+    background: #425068;
+    color: #fff;
+    height: auto;
+    overflow: auto;
+    opacity: 1 !important;
+}
+
+.cpRight .cpRRPE ul.productList li{
+    min-height: 48px !important;
+    line-height: 48px !important;
+    height: 48px !imporant;
+}
+
+.cpRight .cpRRPE ul li{
+    min-height: 64px;
+    max-height: 256px;
+    height: auto;
+    line-height: 32px;
+    text-indent: 16px;
+    background: rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+}
+
+.cpRight .cpRRPE ul li:hover{
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.cpRight .CPPAN .cprPanel{
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: #2F3A4C;
+    border-radius: 1px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.15);
+    font-family: 'Open Sans Condensed';
+    background: #fff;
+}
+
+
+#RIGHTPANINV{
+    grid-area: cprrp;
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: #2F3A4C;
+    border-radius: 1px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.15);
+    font-family: 'Open Sans Condensed';
+    background: #fff;
+    overflow: hidden;
+    transition: all ease 0.3s;
+    transform: rotate3d(0, 1, 0, 90deg);
+}
+
+#RIGHTPANINV img.cpRRP_BCKDROP{
+    position: absolute;
+    width: 100%;
+    left: -25%;
+    top: -25%;
+    transform: rotate(25deg);
+    opacity: 0.05;
+}
+
+.CPRTPL{
+    grid-area: cprtpl;
+    position: relative;
+    background: #D9D9D9 !important;
+}
+
+.CPRTPL input[type=text]{
+    height: 100%;
+    position: absolute;
+    padding-left: 52px;
+    padding-right: 5px;
+    font-family: 'Open Sans';
+    font-family: 'Open Sans';
+    font-weight: normal;
+    left: 33px;
+    width: calc(100% - ((64px * 2) + (35px)));
+    color: rgba(0, 0, 0, 0.75);
+    transition: all ease 0.2s;
+    background-image: url(../images/adm_Search.svg);
+    background-size: 32px 32px;
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    
+}
+.CPRTPL input[type=text]:hover{
+}
+
+.CPRTPL input[type=text]:focus{
+    color: rgba(0, 0, 0, 0.95);
+    font-weight: bold;
+}
+
+.CPRTPL b{
+    position: absolute;
+    left: 0px;
+    background: #fff;
+    height: 64px;
+    width: 32px;
+}
+
+.CPRTPL b input[type=checkbox]{
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    left: 4px;
+    top: calc(50% - 13px);
+}
+
+.CPRTPL button{
+    background: #fff;
+    position: relative;
+    float: right;
+    height: 64px;
+    width: 64px;
+    overflow: hidden;
+    font-weight: bold;
+    font-family: 'Open Sans';
+    font-size: 1.25vh;
+    text-transform: uppercase;
+    margin-left: 1px;
+    color: rgba(0, 0, 0, 0.75);
+    transition: all ease 0.2s;
+}
+
+.CPRTPL button:hover{
+    background: #00BFE9;
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0);
+}
+
+.CPRTPL button:hover img{
+    opacity: 1;
+}
+
+.CPRTPL button img{
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    top: calc(50% - 25%);
+    left: calc(50% - 25%);
+    opacity: 0;
+    transition: all ease 0.2s;
+}
+
+.CPRTPR{
+    grid-area: cprtpr !important;
+    position: relative;
+}
+
+.cpRLP{
+    grid-area: cprlp;
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.cpRLP table{
+    position: relative;
+    width: 100%;
+    background: #D9D9D9;
+    max-width: 100%;
+}
+
+.cpRLP table tr td{
+    background: #fff;
+    text-align: center;
+    position: relative;
+    font-weight: normal;
+    font-family: 'Open Sans';
+    font-size: 1.25vh;
+    height: 64px;
+    overflow: hidden;
+    width: auto;
+}
+
+.cpRLP table tr td.inputTableChkBx{
+    width: 32px;
+}
+
+.cpRLP table tr td.inputTableChkBx input[type=checkbox]{
+    width: 24px;
+    height: 24px;
+}
+
+.cpRLP table tr td.btnSlot{
+    width: 64px;
+    height: 64px;
+    padding: 0px;
+}
+
+.cpRLP table tr td.btnSlot button{
+    background: #00BFE9;
+    position: relative;
+    float: right;
+    height: 64px;
+    width: 64px;
+    overflow: hidden;
+    font-weight: bold;
+    font-family: 'Open Sans';
+    font-size: 1.25vh;
+    text-transform: uppercase;
+    margin-left: 1px;
+    color: rgba(0, 0, 0, 0.75);
+    transition: all ease 0.2s;
+    color: #fff;
+    margin: 0px;
+}
+
+.page_break{
+    page-break-after:always;
+    page-break-before: always;
+}
+
+#INVOICESEARCHSLOT{
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.cpRLP table tr td.btnSlot button:disabled{
+    background: #ecf0f1;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.cpRLP table tr td.btnSlot button:disabled:hover{
+    color: rgba(0, 0, 0, 0.5);
+    cursor: no-drop;
+}
+
+.cpRLP table tr td.btnSlot button:disabled:hover img{
+    opacity: 0;
+    transform: rotate3d(1, 0, 0, 270deg);
+}
+
+.cpRLP table tr td.btnSlot button:hover{
+    color: rgba(0, 0, 0, 0.0);
+    cursor: pointer;
+}
+
+.cpRLP table tr td.btnSlot button img{
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    top: calc(50% - 25%);
+    left: calc(50% - 25%);
+    opacity: 0;
+    transition: all ease 0.2s;
+    transform: rotate3d(1, 0, 0, 270deg);
+}
+
+.cpRLP table tr td.btnSlot button:hover img{
+    opacity: 1;
+    transform: rotate3d(1, 0, 0, 0deg);
+}
+
+.cpRLP table tr.titleTop td{
+    background: #00BFE9;
+    font-weight: bold;
+    font-family: 'Open Sans';
+    color: #fff;
+    font-size: 1.25vh;
+    text-transform: uppercase;
+    height: 24px;
+}
+
+.cpRRP{
+    grid-area: cprrp;
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.cpRRP table{
+    position: relative;
+    width: 100%;
+    background: #D9D9D9 !important;
+}
+
+.cpRRP table .titleBar td{
+    background: #00BFE9;
+    color: #fff;
+    font-weight: normal;
+    font-family: 'Open Sans';
+    padding: 4px;
+    font-size: 1.5vh;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.cpRRP table tr td{
+    position: relative;
+    background: #fff;
+    font-weight: normal;
+    font-family: 'Open Sans';
+    font-size: 14px;
+    height: 64px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.cpRRP table tr td img.prodImg{
+    position: relative;
+    height: 90%;
+}
+
+.cpRRP table tr td.chkBox{
+    width: 32px;
+}
+
+.cpRRP table tr td.chkBox input{
+    width: 24px;
+    height: 24px;
+}
+
+
+.cpRRP table tr td.ebtn{
+    width: 64px;
+    height: 64px;
+}
+
+
+.cpRRP table tr td.ebtn button{
+    background: #00BFE9;
+    position: relative;
+    height: 64px;
+    width: 64px;
+    overflow: hidden;
+    font-weight: bold;
+    font-family: 'Open Sans';
+    font-size: 1.25vh;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 1);
+    transition: all ease 0.2s;
+    cursor: pointer;
+} 
+
+.cpRRP table tr td.ebtn button img{
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    left: calc(50% - 25%);
+    top: calc(50% - 25%);
+    opacity: 0;
+    transition: all ease 0.2s;
+}
+
+.cpRRP table tr td.ebtn button:hover{
+    color: rgba(255, 255, 255, 0);
+}
+
+.cpRRP table tr td.ebtn button:hover img{
+    opacity: 1;
+     transform: rotate(-45deg);
+}
+
+.cpRLP ul{
+    position: relative;
+    list-style-type: none;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    height: 100%;
+}
+
+.cpRLP ul li{
+    position: relative;
+    width: 100%;
+    transition: all ease 0.2s;
+    height: 64px;
+    overflow: hidden;
+    line-height: 64px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    text-indent: 115px;
+    opacity: 0.65;
+    font-family: 'Roboto';
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+
+.cpRLP ul li i{
+    background: #3498db;
+    padding: 3px;
+    color: #fff;
+    font-weight: normal;
+    font-family: 'Open Sans Condensed';
+    font-size: 14px;
+    border-radius: 25px;
+    position: absolute;
+    text-align: left;
+    height: 16px;
+    min-width: 18px;
+    line-height: 16px;
+    font-style: normal;
+    padding-left: 10px;
+    padding-right: 10px;
+    letter-spacing: 1px;
+    right: 74px;
+    top: calc(50% - 16px);
+}
+
+
+.cpRLP ul li b input[type=checkbox]{
+    position: absolute;
+    height: 24px;
+    width: 24px;
+    text-align: center;
+    margin-top: 20px;
+    left: 4px;
+    cursor: pointer;
+}
+
+.cpRLP ul li b{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 32px;
+    height: 64px;
+    background: #FFFFFF;
+    text-align: center;
+    line-height: 64px;
+    transition:  all ease 0.2s;
+    border-right: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.cpRLP ul li:hover b{
+    opacity: 1;
+    background: #00BFE9;
+}
+
+.cpRLP ul li button{
+    width: 64px;
+    background: #00B1D7;
+    height: 100%;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    color: #fff;
+    transition: all ease 0.2s;
+    color: rgba(255, 255, 255, 1);
+    font-size: 0.75vw;
+    text-transform: uppercase;
+    z-index: 999;
+}
+
+
+.cpRLP ul li button img{
+    position: absolute;
+    transform: rotate(0deg);
+    width: 50%;
+    height: 50%;
+    top: calc(50% - 25%);
+    left: calc(50% - 25%);
+    transition: all ease 0.2s;
+    opacity: 0;
+}
+
+.cpRLP ul li button:hover img{
+    transform: rotate(-45deg);
+    opacity: 1;
+}
+
+.cpRLP ul li:hover button{
+    opacity: 1;
+}
+.cpRLP ul li:hover button:hover{
+    background: #00BFE9;
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0);
+}
+
+.cpRLP ul li:hover{
+    background: rgba(0, 0, 0, 0.025);
+    cursor: pointer;
+    opacity: 1;
+}
+
+.cpRLP ul li img.bimg{
+    position: absolute;
+    opacity: 0.5;
+    height: 64px;
+    top: 0px;
+    left: 33px;
+    background: #fff;
+    border-right: 1px solid rgba(0, 0, 0, 0.25);
+    transition: all ease 0.2s;
+    padding-right: 2px;
+    padding-left: 2px;
+}
+
+.cpRLP ul li:hover img.bimg{
+    opacity: 1;
+}
+
+.cpLeft {
+    grid-area: aside;
+    background: #425068;
+}
+
+.cpLeft ul{
+    position: relative;
+    display: block;
+    height: calc(100% - 13%);
+    list-style-type: none;
+}
+
+.cpLeft ul button{
+    display: block;
+    position: relative;
+    text-align: center;
+    font-size: 2vh;
+    background: rgba(0, 0, 0, 0);
+    cursor: pointer;
+    border-bottom: 1px solid #2A3344;
+    text-transform: uppercase;
+    font-family: 'Open Sans';
+    transition: ease all 0.2s;
+    overflow: hidden;
+    color: rgba(255, 255, 255, 0.5);
+    width: 100%;
+    height: 20%;
+    letter-spacing: 1px;
+}
+
+.cpLeft ul button img{
+    position: absolute;
+    left: -32px;
+    top: -16px;
+    height: 150%;
+    opacity: 0.3;
+    z-index: 1;
+    transition: all ease 0.2s;
+}
+
+.cpLeft ul button:hover img{
+    opacity: 0.2;
+    left: -64px;
+}
+
+.cpLeft ul button.active img{
+    opacity: 0.2 !important;
+    left: -64px !important;
+}
+
+.cpLeft ul button b{
+    position: relative;
+    z-index: 10;
+}
+
+.cpLeft ul button.active{
+    background: #2F3A4C !important;
+    color: #fff !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0) !important;
+    letter-spacing: 3px !important;
+    font-size: 2.35vh !important;
+}
+
+.cpLeft ul button:hover{
+    background: #2F3A4C;
+    color: #fff;
+    border-bottom: 1px solid rgba(0, 0, 0, 0);
+    letter-spacing: 3px;
+    font-size: 2.35vh;
+}
+
+.cpFooter{
+    grid-area: footer;
+    background: #121921;
+}
+
+#nav_OrderMode{
+    position: fixed;
+    background: url(../images/Banner_BG_001.png) repeat-x;
+    width: 100%;
+    height: 64px;
+    border-bottom: 1px solid #141517;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
+    line-height: 64px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    z-index: 9999;
+}
+
+#nav_OrderMode .navLogo{
+    height: 64px;
+    position: absolute;
+    right: 25px;
+}
+
+#nav{
+    background: url(../images/Banner_BG_001.png) repeat-x;
+    position: fixed;
+    margin-top: 0px;
+    width: 100%;
+    text-align: left;
+    display: block;
+    padding-bottom: 5px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    z-index: 9999;
+    overflow: hidden;
+    height: 212px;
+}
+
+#nav .nav_mobile{
+    position: relative;
+    width: 960px;
+    margin: 0px auto auto auto;
+}
+
+#nav_OrderMode .nav_ordergoBack{
+    margin-left: 10px;
+    position: relative;
+    line-height: 64px;
+}
+
+
+#nav_OrderMode .nav_ordergoBack a{
+    background: #fff;
+    border-radius: 5px;
+    color: rgba(0, 0, 0, 0.65);
+    font-family: "Roboto";
+    text-transform: uppercase;
+    font-weight: bold;
+    border: 1px solid rgba(0, 0, 0, 0.35);
+    transition: all ease 0.3s;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+    padding: 20px;
+    padding-left: 64px;
+}    
+
+#nav_OrderMode .nav_ordergoBack a:hover{
+    letter-spacing: 2px;
+    border-radius: 15px;
+    font-weight: bolder;
+}
+
+#nav_OrderMode .nav_ordergoBack a:hover img{
+    opacity: 0.85;
+    margin-left: 0px;
+}
+
+#nav_OrderMode .nav_ordergoBack a img{
+    width: 64px;
+    height: 64px;
+    margin-left: 5px;
+    opacity: 0.5;
+     transition: all ease 0.3s;
+    position: absolute;
+    left: 0px;
+}
+
+#nav .login{
+    position: absolute;
+    right: 34px;
+    margin-top: -38px;
+    display: inline-block;
+    text-align: center;
+}
+
+#nav .login a{
+    padding: 3px;
+    font-family: "Roboto";
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #5F5E5E;
+    transition: all ease 0.2s;
+    opacity: 0.75;
+}
+
+#nav .login h5{
+    font-family: "Roboto";
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #5F5E5E;
+    opacity: 0.75;
+    margin-left: -15%;
+    display: block;
+}
+
+#nav .login a:hover{
+    color: #9C56B8;    
+    opacity: 1;
+}
+
+#nav .login img{
+    width: 16px;
+    height: 16px;
+    opacity: 0.45;
+    margin-left: -16px;
+    margin-top: 2px;
+    position: absolute;
+}
+
+#nav .navLogo{
+    margin: 10px;
+    margin-left: 12px;
+    margin-top: 25px;
+}
+
+#nav ul{
+    margin-left: 0px;
+    margin-top: 15px;
+}
+
+.socialMediaVeri{
+    width: 50%;
+    height: 64px;
+    position: relative;
+    list-style-type: none;
+    margin-top: 15px;
+}
+
+.socialMediaVeri li{
+    display: inline-block;
+    margin: 10px;
+}
+
+.socialMediaVeri li a img{
+    width: 64px;
+    height: 64px;
+}
+
+#nav .nav_mobile .socialMediaBox{
+    width: 176px;
+    height: 64px;
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 16px;
+    text-align: center;
+}
+
+#nav .nav_mobile .socialMediaBox a{
+    display: inline-block;
+}
+
+#nav .nav_mobile .socialMediaBox a img{
+    width: 48px;
+    height: 48px;
+    margin: 5px;
+    opacity: 0.8;
+    background: #fff;
+    border-radius: 15px;
+    transition: all ease 0.3s;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+.distLogo{
+    height: 128px;
+    margin-top: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+#nav .nav_mobile .socialMediaBox a:hover img{
+    opacity: 1;
+}
+
+#nav li{
+    display: inline-block;
+    position: relative;
+    padding: 3px;
+    font-family: "Roboto";
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-left: 20px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    font-size: 18px;
+    opacity: 0.45;
+    text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.0);
+    letter-spacing: 1px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.0);
+    transition: all ease 0.3s;
+    color: #000;
+}
+
+#nav li:hover{
+    opacity: 1;
+    color: #9C56B8;
+    padding-bottom: 5px;
+    cursor: pointer;
+    margin-bottom: 0px;
+    border-bottom: 1px solid rgba(156,86,184, 0.75);
+}
+
+#orderContent{
+    width: calc(100% - 64px);
+    position: fixed;
+    margin-top: 200px;
+    min-height: calc(100% - 76px);
+    height: calc(100% - 76px);
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    overflow: hidden;
+     display: grid;
+    grid-gap: 0px;
+    grid-template-columns: 240px calc(100% - 240px);
+    z-index: 999;
+}
+
+
+
+#orderDetailOverlay{
+    position: fixed;
+    background: rgba(0, 0, 0, 0.75);
+    width: calc(100% - (calc(380px + 68px)));
+    height: 100%;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.orderContent_Override{
+    margin-top: 58px !important;
+    min-height: calc(100% - 76px) !important;
+    height: calc(100% - 76px) !important;
+}
+
+.orderContent_Override .orderCommentOverlay{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.55));
+    z-index: 999;
+    transition: ease all 0.3s;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.orderContent_Override .orderCommentOverlay .orderCommentOverlayBX{
+    width: 25%;
+    height: 40%;
+    overflow: hidden;
+    background: #ECECEC;
+    position: absolute;
+    left: calc(50% - (25% / 2));
+    top: calc(50% - (40% / 2));
+    border-radius: 5px;
+    box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.orderContent_Override .orderCommentOverlay .orderCommentOverlayBX textarea{
+    width: 98%;
+    height: 70%;
+    min-width: 98%;
+    min-height: 70%;
+    padding: 10px;
+    max-width: 98%;
+    max-height: 70%;
+     font-weight: normal;
+    font-family: 'Open Sans';
+    font-size: 2vw;
+    margin-top: 2px;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    text-align: center;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.orderContent_Override .orderCommentOverlay .orderCommentOverlayBX textarea:focus{
+    color: #000;
+}
+
+.orderContent_Override .orderCommentOverlay .orderCommentOverlayBX .finishButton{
+    
+    width: 98%;
+    height: calc(30% / 2.15);
+    position: relative;
+    line-height: calc(30% / 2.15);
+    text-align: center;
+    background: #227FBB;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5);
+    font-family: "Anton";
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, 0.55);
+    font-size: 20px;
+    border-radius: 3px;
+    transition: all ease 0.3s;
+    margin: 3px auto auto auto;
+}
+
+.orderContent_Override .orderCommentOverlay .orderCommentOverlayBX .finishButton:hover{
+    background: #2C97DE;
+    color: #ECF0F1;
+    cursor: pointer;
+}
+
+.orderContent_Override .orderCommentOverlay .orderCommentOverlayBX .cancelButton{
+    
+    width: 98%;
+    height: calc(25% / 2.15);
+    position: relative;
+    line-height: calc(25% / 2.15);
+    text-align: center;
+    background: #c0392b;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5);
+    font-family: "Anton";
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, 0.55);
+    font-size: 20px;
+    border-radius: 3px;
+    transition: all ease 0.3s;
+    margin: 3px auto auto auto;
+}
+
+.orderContent_Override .orderCommentOverlay .orderCommentOverlayBX .cancelButton:hover{
+    background: #e74c3c;
+    color: #ECF0F1;
+    cursor: pointer;
+}
+
+
+.orderLeft{
+    position: relative;
+    grid-column: 1;
+    grid-row: 1; 
+    overflow: hidden;
+    min-height: 100%;
+    background: #ECECEC;
+    border-right: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.orderLeft h2{
+    width: 100%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+    background: #fff;
+    height: 64px;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+    font-family: "Anton";
+    text-align: left;
+    line-height: 64px;
+    padding: 10px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 32px;
+    font-weight: normal;
+}
+
+.orderLeft #BrandList{
+    display: block;
+    position: relative;
+    max-height: 100%;
+    text-align: left;
+    width: calc(100%);
+    overflow: hidden;
+    overflow-y: auto;
+    padding-top: 0px;
+    height: calc(100% - 85px);
+    margin: 0px;
+}
+
+.orderLeft #BrandList ul{
+    list-style-type: none;
+    text-indent: 5px;
+    font-family: "Roboto";
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 14px;
+    margin: 10px;
+}
+
+.orderLeft #BrandList ul li{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    height: 24px;
+    line-height: 24px;
+    padding-bottom: 2px;
+    margin-top: 3px;
+    font-weight: bold;
+    transition: all ease 0.2s;
+    background-position: right center;
+}
+.orderLeft #BrandList ul li:hover{
+    color: #866AE1;
+    background-image: url(../images/add_BLK.svg);
+    background-size: 16px 16px;
+    background-repeat: no-repeat;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+
+
+#orderContent .orderCenter{
+    grid-column: 2;
+    grid-row: 1; 
+    position: relative;
+    overflow-y: scroll;
+    min-height: 100%;
+    background: #ECECEC;
+}
+
+#orderContent .orderCenter .brandTitle{
+    margin: 15px;
+    font-family: "Anton";
+    font-size: 32px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    min-width: 10%;
+    padding-bottom: 2px;
+    border-bottom: 1px solid rgba(0, 0, 0,0.5);
+    font-weight: normal;
+    text-align: right;
+}
+
+#orderContent .orderCenter .brandTitle img{
+    width: 100px;
+    height: 100px;
+    float:left;
+    border-radius: 100%;
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    margin-bottom: 4px;
+    background-color: #fff;
+}
+
+#orderContent .orderCenter .slotHolder{
+    margin: 15px;
+    margin-top: 0px;
+}
+
+#orderContent .orderCenter .productSlot{
+    position: relative;
+    width: 256px;
+    display: inline-block;
+    margin: 2px;
+    margin-top: 0px;
+    margin-right: 0px;
+    background: rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+    min-height: calc((42px * 6) + 32px);
+}
+
+#orderContent .orderCenter .productSlot .imgslot{
+    height: 150px;
+    width: 100px;
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(0,0,0,0.24);
+    background-color: #fff;
+    position: absolute;
+    left: 10px;
+    top: 76px;
+    text-align: center;
+    padding: 5px;
+}
+
+#orderContent .orderCenter .productSlot .imgslot img{
+    background-position: center center;
+    background-clip: content-box;
+    height: 150px;
+}
+
+#orderContent .orderCenter .productSlot span{
+    position: absolute;
+    bottom: 5px;
+    left: 10px;
+    font-size: 12px;
+    text-decoration: none;
+    font-style: normal;
+    text-align: center;
+    width: 100px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #3498db;
+}
+
+#orderContent .orderCenter .productSlot span h6{
+    font-size: 11px;
+    font-family: 'Open Sans';
+    line-height: 12px;
+    font-weight: normal;
+    color: rgba(0, 0, 0, 0.75);
+}
+
+#orderContent .orderCenter .productSlot .productSlot_Content{
+    position: relative;
+    padding: 10px;
+    margin-left: 120px;
+    margin-top: 32px;
+}
+
+#orderContent .orderCenter .productSlot h4{
+    padding-bottom: 1px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    font-size: 14px;
+    text-transform:capitalize;
+    position: absolute;
+    left: 0px;
+    width: calc(100% - 10px);
+    height: 28px;
+    line-height: 32px;
+    padding: 5px;
+    background: #fff;
+}
+
+#orderContent .orderCenter .productSlot h4 i{
+    float: right;
+    color: #33495F;
+    font-style: oblique;
+    text-decoration: line-through;
+    font-family: "Open Sans";
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+#orderContent .orderCenter .productSlot h5{
+    position: absolute;
+    top: 38px;
+    background: rgba(255, 255, 255, 0.75);
+    right: 0px;
+    text-align: right;
+    font-size: 12px;
+    font-family: "Open Sans";
+    text-transform: uppercase;
+    color: #E94B35;
+    font-weight: bold;
+    width: 100%;
+    height: 20px;
+    line-height: 20px;
+    padding: 3px;
+}
+
+#orderContent .orderCenter .productSlot h5 .infButton{
+    width: 26px;
+    height: 26px;
+    position: absolute;
+    left: 8px;
+    top: 0px;
+    background-color: rgba(0, 0, 0, 0);
+    background: url(../images/moreinfo.svg) no-repeat;
+    background-position: center center;
+    transition: all ease 0.3s;
+    opacity: 0.6;
+}
+
+#orderContent .orderCenter .productSlot h5 .infButton:hover{
+    cursor: pointer;
+    background: url(../images/moreInfo_hover.svg) no-repeat;
+    background-color: rgba(0, 0, 0, 0);
+    background-position: center center;
+    opacity: 0.75;
+}
+
+#orderContent .orderCenter .productSlot .productSlot_Content .orderTable{
+    margin-top: 32px;
+    border-spacing: 0px;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5);
+    background: #fff;
+    height: calc(42px * 4);
+    width: 120px;
+}
+
+#orderContent .orderCenter .productSlot .productSlot_Content .orderTable td.orderTable_Title{
+   font-size: 12px;
+    font-weight: normal;
+    text-align: left;
+    background: rgba(0, 0, 0, 0.1);
+    text-transform: uppercase;
+    line-height: 16px;
+    padding: 3px;
+    font-style: italic;
+    text-align: center;
+}
+
+#orderContent .orderCenter .productSlot .productSlot_Content .orderTable td.orderTable_NicL{
+    line-height: 32px;
+    text-align: center;
+    background: #ECF0F1;
+    font-family: "Roboto";
+    font-weight: bold;
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+#orderContent .orderCenter .productSlot .productSlot_Content .orderTable td input{
+    text-align: center;
+    height: 32px;
+    padding: 5px;
+    line-height: 32px;
+    width: 72px;
+    font-family: "Roboto";
+    font-weight: bold;
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+#orderContent .orderCenter .productSlot .productSlot_Content .orderTable td input:focus{
+    background: #141517;
+    color: #1FCE6D;
+}
+
+#orderContent .orderCenter .productSlot .productSlot_Content .orderTable td input::-moz-selection { 
+    background: rgba(255, 255, 255, 0.1); 
+}
+#orderContent .orderCenter .productSlot .productSlot_Content .orderTable td input::selection { 
+    background: rgba(255, 255, 255, 0.1); 
+}
+
+#orderContent .orderCenter .productSlot .productSlot_Content .orderTable td input[type=number]::-webkit-inner-spin-button, 
+#orderContent .orderCenter .productSlot .productSlot_Content .orderTable td input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+#orderContent .orderCenter .productSlot .productSlot_InfoHoldr{
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 0px;
+    margin-top: 64px;
+    visibility: hidden;
+    opacity: 0;
+    transition: all ease 0.3s;
+    z-index: 9;
+    overflow: hidden;
+}
+
+#orderContent .orderCenter .productSlot .productSlot_InfoHoldr .productSlot_InfoCont{
+    width: 256px;
+    position: relative;
+    display: block;
+    font-family: "Roboto";
+    font-size: 16px;
+    background: #ECF0F1;
+    height: 50%;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5);
+    color: rgba(0, 0, 0, 0.65);
+}
+
+#orderContent .orderCenter .productSlot .productSlot_InfoHoldr .productSlot_InfoCont h6{
+    font-family: "Roboto";
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 24px;
+    padding: 0px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+    margin-bottom: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+#orderContent .orderCenter .productSlot .productSlot_InfoHoldr .productSlot_InfoCont p{
+    margin-left: 5px;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    font-family: "Roboto";
+    font-size: 16px;
+    height: 75%;
+    position: relative;
+     overflow-y: auto;
+    overflow-x: hidden;
+}
+
+#orderContent .orderCenter .productSlot .productSlot_TotalPrice{
+    position: relative;
+    top: 5px;
+    left: 0px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    width: 120px;
+    background: #fff;
+    font-size: 1em;
+    font-family: "Roboto";
+    font-weight: bolder;
+    letter-spacing: 1px;
+    color: #2B3E51;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+
+
+.orderRight{
+    display: block;
+    position: fixed;
+    top: 72px;
+    right: -320px;
+    background: #E0E0E0;
+    transition: all ease 0.3s;
+    z-index: 999;
+    width: 404px;
+    height: calc(100% - 72px);
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.ORDERCWIN_Closed {
+    width: 384px;
+}
+
+.orderRight .menuButton{
+    background: #0E0F10;
+    background-image: url('../images/orderMenu.svg');
+    background-position: center 10px;
+    background-repeat: no-repeat;
+    background-size: 48px 48px;
+    position: absolute;
+    width: 64px;
+    height: 100%;
+    z-index: 1;
+    transition: background-color ease 0.3s;
+    border-right: 1px solid #000; 
+    overflow: hidden;
+}
+
+.orderRight .menuButton h5{
+    color: #fff;
+    transform: rotate(-90deg);
+    width: 256px;
+    height: 220px;
+    left: 0px;
+    position: absolute;
+    top: 25%;
+    font-size: 22px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    overflow:visible;
+    word-wrap: normal;
+}
+
+.orderRight .menuButton:hover{
+    cursor: pointer;
+}
+
+.orderRight .finishButton{
+    margin-left: 64px;
+    width: calc(100% - 64px);
+    height: 64px;
+    position: relative;
+    line-height: 32px;
+    text-align: center;
+    background: #227FBB;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+    font-family: "Anton";
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 20px;
+    transition: all ease 0.3s;
+}
+
+.orderRight .finishButton:hover{
+    background: #2C97DE;
+    color: #ECF0F1;
+    cursor: pointer;
+}
+
+.orderRight .orderRight_Title{
+    margin-left: 64px;
+    width: calc(100% - 64px);
+    height: 24px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    line-height: 24px;
+    text-align: center;
+    background: #ECECEC;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5);
+    font-family: "Anton";
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 20px;
+    position: relative;
+}
+
+.orderRight .orderRight_Item{
+    margin-left: 64px;
+    margin-top: 0px;
+    width: calc(100% - 64px);
+     background: #E1E1E1;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5);
+    
+    height: 48px;
+    position: relative;
+}
+
+.orderRight .orderRight_Item .orderRight_Item_Graphic{
+    height: 32px;
+    width: 32px;
+    overflow: hidden;
+    background: #fff;
+    border-radius: 100%;
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5); 
+    margin-left: 4px;
+    position: absolute;
+    margin-top: 7px;
+}
+
+.orderRight .orderRight_Item .orderRight_Item_Graphic img{
+    height: 32px;
+}
+
+.orderRight .orderRight_Item h4{
+    position: absolute;
+    text-transform: uppercase;
+    left: 42px;
+    top: 22px;
+    font-size: 12px;
+    opacity: 1;
+    font-family: "Roboto";
+    font-weight: bold;
+    color: #33495F;
+    letter-spacing: 1px;
+}
+
+.orderRight .orderRight_Item h5{
+    position: absolute;
+    left: 42px;
+    top: 5px;
+    font-size: 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+    padding-bottom: 2px;
+    text-transform: uppercase;
+    font-family: "Roboto";
+    font-weight: bold;
+    color: #E94B35;
+}
+
+.orderRight .orderRight_Item table{
+    position: absolute;
+    right: 22px;
+    top: 2px;
+    text-align: center;
+    background: #ECF0F1;
+    font-family: "Roboto";
+    font-weight: bold;
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.6);
+    line-height: 32px;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+    padding: 2px;
+}
+
+.orderRight .orderRight_Item input[type=number]{
+    width: 32px;
+    height: 32px;
+    text-align: center;
+}
+
+.orderRight .orderRight_Item input[type=number]::-webkit-inner-spin-button, 
+.orderRight .orderRight_Item input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+.orderRight .orderRight_Item input[type=submit]{
+    width: 16px;
+    height: 16px;
+    font-weight: normal;
+    font-size: 14px;
+    font-family: "Roboto";
+    text-transform: uppercase;
+    background: #C23824;
+    color: #ECF0F1;
+    padding-left: 2px;
+    padding-top: 0px;
+    position: absolute;
+    right: -1px;
+    top: -1px;
+    text-align: center;
+    line-height: 16px;
+    border-bottom-left-radius: 5px;
+    box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.25);
+    border: 1px solid #E94B35;
+    transition: all ease 0.3s;
+}
+
+.orderRight .orderRight_Item input[type=submit]:hover{
+    border: 1px solid #C23824;
+    background: #E94B35;
+    color: #fff;
+    cursor: pointer;
+}
+
+.orderRight .orderRight_Item input[type=submit]:active{
+  border: 1px solid #2B3E51;
+    background: #33495F;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+#accountSplit .contactLeft{
+    grid-column: 1;
+    grid-row: 1;
+    position: relative;
+    height: 100%;
+    padding-right: 3px;
+}
+
+#accountSplit .contactLeft .contactBox{
+    width: 98%;
+    margin: 10px auto auto auto;
+    height: 57px;
+    background: #fff;
+    border-radius: 4px;
+    position: relative;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+}
+
+#accountSplit .contactLeft .contactBox h4{
+    margin-top: 3px;
+    float:right;
+    margin-right: 6px;
+    font-family: 'Anton';
+    font-size: 16px;
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #3498db;
+    clear: both;
+}
+
+#accountSplit .contactLeft .contactBox h5{
+    margin-left: 64px;
+    float: left;
+    margin-top: 3px;
+    font-family: 'Anton';
+    font-size: 16px;
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#accountSplit .contactLeft .contactBox ul{
+    list-style-type: none;
+    margin-left: 64px;
+    display: block;
+    width: calc(100% - 64px);
+    }
+
+#accountSplit .contactLeft .contactBox ul li{
+    display: inline-block;
+    position: relative;
+    margin-right: 0px;
+    line-height: 14px;
+    padding-left: 16px;
+    width: 45%;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+#accountSplit .contactLeft .contactBox ul li.ri{
+    text-align: right;
+}
+
+#accountSplit .contactLeft .contactBox ul li img{
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    margin-left: -18px;
+    opacity: 0.65;
+}
+
+#accountSplit .contactLeft .contactBox .contactBoxPin{
+padding: 7px;
+    height: 32px;
+    width: 32px;
+    background: #ECECEC;
+border: 2px solid #ECECEC;
+    border-radius: 5px;
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    text-align: center;
+    line-height: 4px;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+#accountSplit .contactLeft .contactBox .contactBoxPin img{
+    position: relative;
+    opacity: 0.65;
+    height: 100%;
+    width: 100%;
+}
+
+
+#accountSplit .contactRight{
+    position: relative;
+    grid-column: 2;
+    grid-row: 1;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    background: #fff;
+    height: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+    background-image: url(../images/mapback.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 128px 128px;
+}
+
+#accountSplit{
+    position: relative;
+    width: 960px;
+    margin: 220px auto auto auto;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-gap: 0px;
+    height: calc(100% - 320px);
+}
+
+#accountSplit h3{
+    font-family: "Open Sans Condensed";
+    font-size: 22px;
+    font-weight: normal;
+    text-transform: uppercase;
+    padding-bottom: 2px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    text-indent: 5px;
+    margin-top: 10px;
+}
+
+#accountSplit b{
+    display: block;
+    line-height: 26px;
+    height: 32px;
+    margin-top: 10px;
+    font-weight: normal;
+    font-family: "Roboto";
+}
+
+#accountSplit b img.validated{
+    width: 16px;
+    height: 16px;
+    opacity: 0.75;
+    padding: 5px;
+    background: #1FCE6D;
+    border-radius: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    float: left;
+    margin-right: 10px;
+}
+
+#accountSplit b img.notvalidated{
+    width: 16px;
+    height: 16px;
+    opacity: 0.75;
+    padding: 5px;
+    background: #F2C500;
+    border-radius: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    float: left;
+    margin-right: 10px;
+}
+
+#accountSplit b a{
+    color: #2C97DE;
+    transition: all ease 0.3s;
+}
+
+#accountSplit i{
+    display: block;
+    font-family: "Roboto";
+    text-transform: capitalize;
+    font-weight: normal;
+    margin-top: 5px;
+}
+
+#accountSplit b a:hover{
+    text-shadow: 0px 0px 5px #fff;
+    text-decoration: underline;
+}
+
+#accountSplit .gridSplit{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-gap: 2px;
+    width: 100%;
+}
+
+#accountSplit .gridSplit .gSplitLeft{
+    grid-column: 1;
+    grid-row: 1;
+    position: relative;
+}
+
+#accountSplit .gridSplit .gSplitRight{
+    grid-column: 2;
+    grid-row: 1;
+}
+
+#accountSplit input[type=button]{
+    height: 32px;
+    padding: 5px;
+    display: inline-block;
+    margin: 0px;
+    width: 100%;
+    margin-top: 5px;
+    background: #2C97DE;
+    font-family: "Roboto";
+    text-transform: uppercase;
+    border-radius: 5px;
+    font-weight: bold;
+    color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    transition: all ease 0.2s;
+}
+
+#accountSplit .inputCancel{
+    background: #C23824 !important;
+    color: #ECF0F1 !important;
+}
+
+#accountSplit .inputCancel:hover{
+    background: #E94B35 !important;
+    color: #FFFFFF !important;
+}
+
+#accountSplit input[type=button]:disabled{
+    background: rgba(0, 0, 0, 0);
+    color: rgba(0, 0, 0, 0.5);
+    opacity: 0.4;
+}
+
+#accountSplit input[type=button]:disabled:hover{
+    background: rgba(0, 0, 0, 0);
+    color: rgba(0, 0, 0, 0.5);
+     letter-spacing: 0px;
+    cursor: default;
+}
+
+#accountSplit input[type=button]:hover{
+    background: #26B3F5;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+#accountSplit input[type=text]{
+    display: block;
+    height: 36px;
+    width: 100%;
+   font-family: "Roboto";
+    font-weight: normal;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    line-height: 36px;
+    background: rgba(0, 0, 0, 0);
+    text-indent: 5px;
+    background: #fff;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-radius: 3px;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+#accountSplit input[type=password]{
+    display: block;
+    height: 36px;
+    width: 100%;
+   font-family: "Roboto";
+    font-weight: normal;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    line-height: 36px;
+    background: rgba(0, 0, 0, 0);
+    text-indent: 5px;
+    background: #fff;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-radius: 3px;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+#accountSplit input[type=text]:disabled{
+    background: rgba(0, 0, 0, 0);
+}
+
+#accountSplit .accountSplit_left{
+    border-right: 1px solid rgba(0, 0, 0, 0.15);
+    padding: 10px;
+    grid-column: 1;
+    grid-row: 1;
+    position: relative;
+}
+
+#accountSplit .accountSplit_right{
+    padding: 10px;
+    grid-column: 2;
+    grid-row: 1;    
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+#accountSplit .accountSplit_right::-webkit-scrollbar {
+    width: 7px;
+    z-index: 99;
+}
+
+#accountSplit .accountSplit_right::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.3);
+    box-shadow: inset 2px 2px 2px rgba(0, 0, 0, 0.3);
+    z-index: 99;
+    border-radius: 3px;
+}
+
+#accountSplit .accountSplit_right::-webkit-scrollbar-thumb {
+    border-radius: 3px;
+    background: rgba(255, 255, 255, 0.8); 
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.3);
+    z-index: 99;
+}
+
+#accountSplit .accountSplit_right ul{
+    list-style-type: none;
+    margin: 5px;
+}
+
+#accountSplit .accountSplit_right li{
+    position: relative;
+    height: 24px;
+    line-height: 14px;
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    background: #ECF0F1;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    border-radius: 2px;
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.25);
+    margin-top: 5px;
+    transition: all ease 0.3s;
+}
+
+#accountSplit .accountSplit_right li:hover{
+    background: #FFFFFF;
+    cursor: pointer;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+}
+
+#accountSplit .accountSplit_right li i{
+    margin-left: 24px;
+    font-style: normal;
+    font-family: "Ubuntu";
+    font-size: 12px;
+    background: rgba(0, 0, 0, 0.05);
+    width: 25%;
+    text-align: center;
+    border-radius: 2px;
+    color: #2B3E51;
+}
+
+#accountSplit .accountSplit_right li b{
+    position: absolute;
+    top: -11px;
+    right: 5px;
+    font-family: "Ubuntu";
+    font-size: 14px;
+    color: #2B3E51;
+    font-weight: bold;
+}
+
+#accountSplit .accountSplit_right li h6{
+    position: absolute;
+    left: 32%;
+    top: 6px;
+    font-family: "Roboto";
+    font-size: 14px;
+    color: #E94B35;
+    font-weight: normal;
+}
+
+#accountSplit .accountSplit_right li img{
+    position: absolute;
+    opacity: 0.5;
+    height: 16px;
+    width: 16px;
+    left: 5px;
+    top: 4px;
+}
+
+#invoiceViewer{
+    position: fixed;
+    width: 50%;
+    height: 80%;
+    top: 10%;
+    left: calc(50% - 49%/2);
+    max-width: 960px;
+    min-height: 570px;
+    background: #fff;
+    z-index: 9999;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.45);
+    overflow: hidden;
+    display: none;
+}
+
+#invoiceViewer .invoiceTopper{
+    height: 48px;
+    width: 100%;
+    background: #2B3E51;
+    position: relative;
+    display: block;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    text-align: right;
+    line-height: 60px;
+}
+
+#invoiceViewer .invoiceTopper button{
+    padding: 5px;
+    display: inline-block;
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    margin-right: 5px;
+    border-radius: 100%;
+    transition: all ease 0.2s;
+}
+
+#invoiceViewer .invoiceTopper button:hover{
+    background: #ECF0F1;
+    border: 1px solid rgba(0, 0, 0, 0.55);
+    cursor: pointer;
+}
+
+#invoiceViewer .invoiceTopper button img{
+    opacity: 0.65;
+}
+
+ #invoiceContent{
+    padding: 0px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    height: calc(100% - 48px);
+     padding-bottom: 48px;
+    width: 100%;
+    position: relative;
+}
+
+ #invoiceContent .invLogo{
+    width: 20%;
+    min-width: 76px;
+    position: absolute;
+    right: 3%;
+    top: 3%;
+    display: block;
+}
+
+ #invoiceContent h2{
+    position: relative;
+    left: 2.5%;
+    top: 3%;
+    display: block;
+    font-size: 32px;
+    font-family: "Anton";
+    letter-spacing: 5px;
+    font-weight: normal;
+}
+
+ #invoiceContent h2 table{
+    position: relative;
+    display: block;
+    font-size: 14px;
+    width: 40%;
+    border-top: 1px solid rgba(0, 0, 0, 0.15);
+    text-align: left;
+    font-weight: normal;
+    text-decoration: none;
+    font-style: normal;
+    letter-spacing: 0px;
+    font-family: "Roboto";
+    padding-top: 5px;    
+}
+
+ #invoiceContent h2 table tr td{
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    padding: 5px;
+    background: #ECF0F1;
+    text-align: center;
+    font-size: 12px;
+}
+
+ #invoiceContent h2 table tr th{
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    padding: 5px;
+    padding-right: 15px;
+    font-size: 12px;
+    background: #ECF0F1;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+ #invoiceContent .invoiceDivider{
+    width: 95%;
+    position: relative;
+    left: 2.5%;
+    top: 32px;
+    border-top: 2px solid rgba(0, 0, 0, 0.15);
+    grid-template-columns: calc(50%-1px) calc(50%-1px);
+    display: grid;
+    grid-gap: 2px;
+    height: 128px;
+    padding-top: 5px;
+}
+
+#invoiceContent .invoiceDivider .invdivLeft{
+    grid-column: 1;
+    grid-row: 1;   
+    background: #ECF0F1;
+}
+
+ #invoiceContent .invoiceDivider ul{
+    list-style-type: none;
+}
+
+ #invoiceContent .invoiceDivider ul li{
+    padding-top: 1px;
+    padding-bottom: 3px;
+    text-indent: 5px; 
+    font-family: "Roboto";
+    font-weight: normal;
+    font-size: 14px;
+}
+
+ #invoiceContent .invoiceDivider ul li h4{
+    width: 100%;
+    background: #BDC3C7;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-indent: 5px;
+}
+
+ #invoiceContent .invoiceDivider .invdivRight{
+    grid-column: 2;
+    grid-row: 1;   
+    background: #ECF0F1;
+}
+
+ #invoiceContent .invdataTable{
+    position: relative;
+    display: table;
+    left: 2.5%;
+    border-spacing: 0px;
+    margin-top: 32px;
+    width: 95%;
+    table-layout: auto;
+    border: 1px solid #2B3E51 !important;
+    border-bottom: 2px solid #2B3E51 !important;
+}
+
+ #invoiceContent .invdataTable tr.invdataTableOther{
+    background: #ECF0F1;
+}
+
+ #invoiceContent .invdataTable tr.invdataTotal{
+    background: #2B3E51;
+}
+
+ #invoiceContent .invdataTable tr.invdataTotal td.invTD{
+    border-left: 1px solid rgba(0, 0, 0, 0.01) !important;
+    border-right: 1px solid rgba(0, 0, 0, 0.01) !important;
+    border-top: 1px solid rgba(0, 0, 0, 0.45) !important;
+     text-transform: uppercase !important;
+    font-weight: normal;
+    color: #ECF0F1;
+    font-family: 'Roboto';
+    letter-spacing: 0.5px;
+    background: #384E64;
+    height: 24px;
+    line-height: 24px;
+}
+
+ #invoiceContent .invdataTable tr.invdataTableTitles{
+    background: #ECF0F1;
+}
+
+ #invoiceContent .invdataTable tr.invdataTableTitles td{
+    border: 1px solid rgba(0, 0, 0, 0) !important;
+    border-top: 1px solid #2B3E51 !important;
+    border-bottom: 2px solid #2B3E51 !important;
+    border-left: 1px solid #2B3E51 !important;
+    border-right: 1px solid #2B3E51 !important;
+    padding: 3px;
+    height: 32px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: "Roboto";
+    letter-spacing: 0px;
+    font-size: 12px;
+    text-align: center;
+    color: #8F3FAF;
+}
+
+ #invoiceContent .invdataTable tr{
+    
+}
+
+ #invoiceContent .invdataTable tr td.invdataTableQty{
+    width: 80px !important;
+}
+ #invoiceContent .invdataTable tr td{
+    border-left: 1px solid #2B3E51 !important;
+     border-right: 1px solid #2B3E51 !important;
+    padding: 3px;
+    text-align: center;
+    font-family: "Roboto";
+    height: 24px;
+    line-height: 24px;
+}
+
+#saveOverlay{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.0));
+    border-radius: 5px;
+    visibility: hidden;
+    opacity: 0;
+    transition: all ease 0.3s;
+    overflow: hidden;
+    height: 0%;
+}
+
+#saveOverlay .saveBox{
+    width: 60%;
+    position: absolute;
+    height: auto;
+    left: 20%;
+    top: 20%;
+    padding: 5px;
+    background: #ECECEC;
+    border-radius: 5px;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.25);
+    transition: all ease 0.3s;
+}
+
+#saveOverlay .saveBox button{
+    padding: 10px;
+    width: 32px;
+    height: 32px;
+    line-height: 8px;
+    overflow: hidden;
+    position: absolute;
+    right: 4px;
+    top: 4px;
+    background: #2C97DE;
+    font-family: "Roboto";
+    text-transform: uppercase;
+    border-radius: 5px;
+    font-weight: bold;
+    color: #fff;
+    transition: all ease 0.3s;
+}
+
+#saveOverlay .saveBox button:hover{
+    background: #26B3F5;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+#pageContent{
+    width: 960px;
+    position: relative;
+    margin: 200px auto auto auto;
+    min-height: calc(100% - (264px));
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+#pageContent .landingGoal{
+    text-transform: uppercase;
+    font-size: 64px;
+    margin-top: 20px;
+    margin-top: 20px;
+    font-family: "Open Sans Condensed";
+    width: 100%;
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: 8px;
+}
+
+ul.pageContent_Goals{
+    width: 100%;
+    border-top: 1px dotted rgba(0, 0, 0, 0.25);
+    display: block;
+    text-align: center;
+}
+
+ul.pageContent_Goals li{
+    position: relative;
+    display: inline-flex;
+    width: calc(100% / 3.25);
+    margin-right: 5px;
+    height: 335px;
+    margin-top: 20px;
+    border-bottom: 1px dotted rgba(0, 0, 0, 0.25);
+    text-align: center;
+    cursor: pointer;
+}
+
+ul.pageContent_Goals li:hover h3{
+    color: #9C56B8;
+    letter-spacing: 4px;
+}
+
+
+ul.pageContent_Goals li img{
+   opacity: 0.65;
+    width: 64px;
+    height: 64px;
+    position: absolute;
+    margin-top: 16px;
+    margin-left: calc(50% - 64px/2);
+    transition: all ease 0.3s;
+}
+
+ul.pageContent_Goals li:hover img{
+    opacity: 0.75;
+    width: 80px;
+    height: 80px;  
+     margin-left: calc(50% - 80px/2);
+}
+
+ul.pageContent_Goals li h3{
+    font-family: "Zilla Slab";
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 32px;
+    position: absolute;
+    margin-top: 108px;
+    width: 100%;
+    padding-bottom: 3px;
+    letter-spacing: 2px;
+    border-bottom: 3px dotted rgba(0, 0, 0, 0.15);
+    transition: all ease 0.3s;
+}
+
+ul.pageContent_Goals li p{
+    width: 100%;
+    padding-top: 200px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+#pageContent .pageContent_Register{
+    width: 90%;
+    margin: 10px auto auto auto;
+    padding: 15px;
+    border: 6px double #5F5E5E;
+    text-align: center;
+    height: 128px;
+    line-height: 128px;
+     font-family: "Zilla Slab";
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 48px;
+    letter-spacing: 5px;
+    transition: all ease 0.3s;
+}
+
+#pageContent .pageContent_Register:hover{
+    border-color: #9C56B8;
+    color: #9C56B8;
+    letter-spacing: 3px;
+    font-size: 56px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 6px double #9C56B8;
+}
+
+
+
+.brandDetailViewer{
+    width: 960px;
+    height: 390px;
+    background: #fff;
+    position: fixed;
+    z-index: 999;
+    top: calc(50% - (390px));
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    visibility: hidden;
+    opacity: 0;
+    transition: all ease 0.3s;
+}
+
+.brandDetailViewer .logoWatermark{
+    width: calc(333px / 1.25);
+    height: calc(343px / 1.25);
+    padding: 5px;    
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    margin: 10px;
+    overflow: hidden;
+    text-align: center;
+    position: relative;
+}
+
+.brandDetailViewer .logoWatermark img{
+    width: 100%;
+    position: relative;
+}
+
+
+.brandDetailViewer .bdv_Content{
+    position: relative;
+    display: flex;
+    width: 100%;
+    flex-flow: row;
+    height: 100%;
+}
+
+.bdv_lct{
+    position: relative;
+    grid-area: 'bdv_lct';
+    height: 100%;
+    width: 40%;
+    text-align: center;
+    color: #fff;
+    background: #2C3F52;
+}
+
+.bdv_lct h4::before{
+    content: 'Total Products: ';
+    color: rgba(255, 255, 255, 0.65);
+    font-weight: normal;
+    font-size: 16px;
+    font-family: 'Open Sans';
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.bdv_lct h4{
+    font-weight: bold;
+    font-size: 18px;
+    font-family: 'Open Sans';
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.bdv_lct .bdv_button{
+    background: rgba(255, 255, 255, 0.05);
+    height: 48px;
+    line-height: 48px;
+    text-align: center;
+    position: absolute;
+    bottom: 0px;
+    text-indent: -10px;
+    font-weight: bold;
+    font-family: 'Open Sans';
+    width: 100%;
+    text-transform: uppercase;
+    transition: all ease 0.3s;
+}
+
+.bdv_lct .bdv_button:hover{
+    background: #3498db;
+    cursor: pointer;
+    letter-spacing: 1px;
+}
+
+.bdv_lct .bdv_button img{
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    top:8px;
+    margin-left: 5px;
+}
+
+
+.bdv_rtct{
+    grid-area: 'bdv_rtct';
+    background: #fff;
+    width: 100%;
+    padding: 0px;
+}
+
+.bdv_split{
+    display: inline-flex;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.bdv_split .bdv_sLeft{
+    grid-column: 1;
+    grid-row: 1;
+    background: #fff;
+    height: calc(100% - 42px);
+    overflow-x: hidden;
+    width: 100%;
+    overflow-y: scroll;
+}
+
+.bdv_split .bdv_sLeft ul{
+    width: 100%;
+    display: block;
+    height: calc(100% - 42px);
+}
+
+.bdv_split .bdv_sLeft ul li{
+    display: block;
+    position: relative;
+   width: 100%;
+    background: #fff;
+    height: 49px;
+    text-align: left;
+    line-height: 49px;
+    text-indent: 54px;
+    font-weight: bold;
+    font-family: 'Roboto';
+    font-size: 14px;
+    letter-spacing: 0px;
+    overflow: hidden;
+    word-break: keep-all;
+    word-wrap: normal;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    transition: all ease 0.3s;
+}
+
+.bdv_split .bdv_sLeft ul li:hover{
+    cursor: pointer;
+    background: #3498db;
+    color: #fff;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.bdv_split .bdv_sLeft ul li .bdv_imgPrHd{
+    height: 32px;
+    width: 32px;
+    padding: 5px;
+    overflow: hidden;
+    position: absolute;
+    left: 3px;
+    top: 2px;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    background: #fff;
+    text-align: center;
+    text-indent: 0px;
+}
+
+.bdv_split .bdv_sLeft ul li .bdv_imgPrHd img{
+    height: 32px;
+}
+
+.bdv_split .bdv_sRight{
+    grid-column: 2;
+    grid-row: 1;
+    background: #F9FBFB;
+    position: relative;
+    width: 100%;
+    height: calc(100% - 42px);
+}
+
+.bdv_split .bdv_sRight h1{
+    position: absolute;
+    top: 10px;
+    left: 140px;
+    font-size: 14px;
+    font-family: 'Roboto';
+    width: calc(100% - 150px);
+    text-align: center;
+    padding-bottom: 0px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    height: 48px;
+    padding-top: 5px;
+}
+
+.bdv_split .bdv_sRight .bdv_prodImg{
+    width: 100px;
+    height: 150px;
+    overflow: hidden;
+    text-align: center;
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    position: absolute;
+    padding: 10px;
+    left: 10px;
+    top: 10px;
+}
+
+.bdv_split .bdv_sRight .bdv_prodImg img{
+    height: 100%;
+    position: relative;
+}
+
+.bdv_split .bdv_sRight h2{
+    position: absolute;
+    top: 190px;
+    left: 10px;
+    width: 100px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 12px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-family: 'Roboto';
+    color: #3498db;
+}
+
+.bdv_split .bdv_sRight h6{
+    width: 100%;
+    text-align: center;
+    line-height:260px;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.bdv_split .bdv_sRight h3{
+    position: absolute;
+    top: calc(64px + 72px);
+    left: 140px;
+    width: 180px;
+    text-align: left;
+    font-weight: normal;
+    font-size: 12px;
+    padding-bottom: 5px;
+    font-family: 'Roboto';
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    height: 86px;
+}
+
+.bdv_split .bdv_sRight h3 b{
+    position: absolute;
+    margin-top: -16px;
+    font-size: 14px;
+}
+
+.bdv_split .bdv_sRight h4{
+    position: absolute;
+    top: 72px;
+    left: 140px;
+    width: 180px;
+    font-weight: bold;
+    font-size: 14px;
+    font-family: 'Roboto';
+    text-align: left;
+    height: 32px;
+    line-height: 32px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    padding-bottom: 5px;
+}
+
+.bdv_split .bdv_sRight h4 select{
+    background: #fff;
+    height: 32px;
+    line-height: 32px;
+    padding-left: 5px;
+    padding-right: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    margin-left: 11px;
+    position: absolute;
+    right: 0px;
+}
+
+.bdv_split .bdv_sRight .bdv_prodDesc{
+    height: 25%;
+    width: calc(100% - 20px);
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 10px;
+    background: #ecf0f1;
+    border-top: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+
+.bdv_titleBar{
+    background: #ecf0f1;
+    width: 100%;
+    height: 42px;
+    line-height: 42px;
+    text-indent: 10px;
+    font-weight: normal;
+    color: rgba(0, 0, 0, 0.65);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.bdv_close{
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: #fff;
+    border-radius: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    color: rgba(0, 0, 0, 0.5);
+    font-family: 'Roboto';
+    font-weight: bold;
+    font-size: 16px;
+    transition: all ease 0.3s;
+}
+
+.bdv_close:hover{
+    color: #fff;
+    background: #3498db; 
+    cursor: pointer;
+}
+
+
+#pageContent .searchBar{
+    width: 100%;
+    height: 32px;
+    overflow: hidden;
+    background: url(../images/Banner_BG_001.png) repeat-x;
+    margin-top: 16px;
+    border: 1px dotted rgba(0, 0, 0, 0.5);
+    border-radius: 3px;
+    padding: 5px;
+}
+
+#BrandList{
+    display: block;
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 64px;
+    margin-left: 10px;
+}
+
+#BrandList .brandBox{
+    display: inline-grid;
+    position: relative;
+    width: calc(100% / 5);
+    height:240px;
+    overflow: hidden;
+    text-align: center;
+    background: #fff;
+    border: 2px solid rgba(0, 0, 0, 0.35);
+    padding: 10px;
+    margin: 10px;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25);
+    opacity: 0.80;
+    transition: all ease 0.4s;
+}
+
+#BrandList .brandBox:hover{
+    opacity: 1;
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.35);
+    border-color: #9C56B8;
+    cursor: pointer;
+}
+
+#BrandList .brandBox img{
+    position: absolute;
+    width: 90%;
+    left: 11px;
+    top: 9px;
+    z-index: 0;
+    border-radius: 3px;
+    margin-bottom: 5px;
+}
+
+#BrandList .brandBox:hover h4{
+    color: #9C56B8 !important;
+    letter-spacing: 0px;
+    font-weight: bold;
+}
+#BrandList .brandBox h4{
+    position: absolute;
+    z-index: 1;
+    bottom: 0px;
+    height: 49px;
+    width: 100%;
+    line-height: 49px;
+    font-size: 16px;
+    font-family: "Roboto";
+    font-weight: normal;
+    color: rgba(0, 0, 0, 0.75);
+    letter-spacing: -1px;
+    text-transform: uppercase;
+    border-top: 1px dotted rgba(0, 0, 0, 0.25);
+    transition: all ease 0.3s;
+}
+
+
+#footer{
+    position: fixed;
+    margin-top: 0px;
+    bottom: 0px;
+    width: 100%;
+    background: #141517;
+    height: 60px;
+    color: rgba(255, 255, 255, 0.45);
+    line-height: 16px;
+    font-size: 14px;
+    font-weight: normal;
+    font-family: "Open Sans Condensed";
+    overflow: hidden;
+    text-transform: uppercase;
+    padding-top: 4px;
+}
+
+#footer a{
+    color: rgba(255, 255, 255, 0.45);
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: all ease 0.3s;
+}
+
+#footer a:hover{
+    color: #70D7FF;
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
